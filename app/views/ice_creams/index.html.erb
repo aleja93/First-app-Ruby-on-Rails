@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Ice Creams</h1>
+<h1>Ice Creams</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
       <tr>
         <td><%= ice_cream.name %></td>
         <td><%= ice_cream.description %></td>
-        <td><%= ice_cream.picture %></td>
+        <!-- <td><img src=<%= ice_cream.picture %> /></td> -->
+        <td><%=image_tag(ice_cream.picture_url, :width => 100) if ice_cream.picture.present? %></td>
         <td><%= ice_cream.price %></td>
-        <img src=ice_cream.picture />
         <td><%= link_to 'Show', ice_cream %></td>
         <td><%= link_to 'Edit', edit_ice_cream_path(ice_cream) %></td>
         <td><%= link_to 'Destroy', ice_cream, method: :delete, data: { confirm: 'Are you sure?' } %></td>

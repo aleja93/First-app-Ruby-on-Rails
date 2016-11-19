@@ -12,7 +12,8 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @ice_cream.picture %>
+  <!-- <%= @ice_cream.picture %> -->
+  <%=image_tag(@ice_cream.picture_url, :width => 100) if @ice_cream.picture.present? %>
 </p>
 
 <p>
